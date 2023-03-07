@@ -8,10 +8,12 @@ namespace OOP3
 {
     internal class BasvuruManager
     {
-        public void BasvuruYap(IKrediManager krediManager)
+        //Methof injection
+        public void BasvuruYap(IKrediManager krediManager, ILoggerService loggerService)
         {
             //Başvuran bilgilerini değerlendirelim
             krediManager.Hesapla();
+            loggerService.Log();
         }
 
         public void KrediiOnBilgilendirmesiYap(List<IKrediManager> krediler)

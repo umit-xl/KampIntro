@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-    interface IKrediManager
+    internal interface ILoggerService
     {
-        void Hesapla();
-        void BiseyYap();
-
+        void Log();
     }
 }
-
