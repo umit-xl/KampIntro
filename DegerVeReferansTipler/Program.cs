@@ -20,7 +20,7 @@ namespace KampIntro
             sayilar1 = sayilar2;
             sayilar1[0] = 999;
             sayilar2[1] = 72839479;
-
+            
             Console.WriteLine( "Sayilar : " +  sayilar1[1]);
 
             //int decimal float double bool = değer tip

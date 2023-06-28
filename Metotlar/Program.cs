@@ -19,7 +19,7 @@ namespace KampIntro
             urun2.Fiyati = 10;
             urun2.Aciklama = "Çilek gibi çilek";
 
-            Urun[] urunler = new Urun[] { urun1, urun2}; 
+            Urun[] urunler = new Urun[] { urun1, urun2};
 
             //type-safe == tip güvenli
             foreach (Urun item in urunler)
