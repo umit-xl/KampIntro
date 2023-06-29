@@ -7,7 +7,7 @@ namespace Koleksiyonlar
     {
         static void Main(string[] args)
         {
-            //string[] isimler = new string[] { "Ümit", "Alba", "Ceylin", "Eymen" };
+            //string[] isimler = new string[] { "Ümit", "Alba", "Nurcan", "Eymen" };
             //Console.WriteLine(isimler[0]);
             //Console.WriteLine(isimler[1]);
             //Console.WriteLine(isimler[2]);
@@ -19,7 +19,7 @@ namespace Koleksiyonlar
             //Console.WriteLine(isimler[0]);
 
 
-            List<string> isimler2 = new List<string>() { "Ümit", "Alba", "Ceylin", "Eymen" };
+            List<string> isimler2 = new List<string>() { "Ümit", "Alba", "Nurcan", "Eymen" };
             Console.WriteLine(isimler2[0]);
             Console.WriteLine(isimler2[1]);
             Console.WriteLine(isimler2[2]);

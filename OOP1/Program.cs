@@ -8,7 +8,6 @@ namespace OOP1
         {
             Product product1 = new Product();
             Product product2 = new Product();
-            Product product3 = new Product();
 
             product1.Id = 1;
             product1.CategoryId = 2;
@@ -29,6 +28,9 @@ namespace OOP1
             productManager.Add(product2);
             Console.WriteLine(product2.ProductName);
 
+            Product[] products = new Product[] { product1, product2 };
+            
+            productManager.List(products);
             
 
             //int double bool... = değer tip

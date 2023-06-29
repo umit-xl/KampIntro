@@ -20,7 +20,15 @@ namespace OOP1
 
         public void Remove(Product product)
         {
+            Console.WriteLine(product.ProductName + "Silindi");
+        }
 
+        public void List(Product[] product)
+        {
+            foreach (var products in product)
+            {
+                Console.WriteLine("Ürünler : " + products.ProductName);
+            }
         }
 
         
