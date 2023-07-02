@@ -6,45 +6,46 @@ using System.Threading.Tasks;
 
 namespace MyDictionary
 {
-    internal class MyDictionary<Tkey, Tvalue>
+    internal class MyKeyValuePair<TKey, TValue>
     {
-        Tkey[] keys;
-        Tvalue[] values;
+        public TKey Key { get; set; }
+        public TValue Value { get; set; }
+    }
+
+    internal class MyDictionary<TKey, TValue>
+    {
+        private MyKeyValuePair<TKey, TValue>[] items;
 
         public MyDictionary()
         {
-            keys = new Tkey[0];
-            values = new Tvalue[0];
+            items = new MyKeyValuePair<TKey, TValue>[0];
         }
 
-
-
-        public void Add(Tkey key, Tvalue value)
+        public void Add(TKey key, TValue value)
         {
-            Tkey[] tKeys = keys;
-            Tvalue[] tValues = values;
+            MyKeyValuePair<TKey, TValue>[] tempItems = items;
 
-            keys = new Tkey[keys.Length+1];
-            values = new Tvalue[values.Length+1];
+            items = new MyKeyValuePair<TKey, TValue>[items.Length + 1];
 
-            for (int i = 0; i < tKeys.Length; i++)
+            for (int i = 0; i < tempItems.Length; i++)
             {
-                keys[i] = tKeys[i];
+                items[i] = tempItems[i];
             }
 
-            keys[keys.Length - 1] = key;
-
-            for (int i = 0; i < tValues.Length; i++)
+            items[items.Length - 1] = new MyKeyValuePair<TKey, TValue>()
             {
-                values[i] = tValues[i];
-            }
-            values[values.Length - 1] = value;
-
-
-            
-
+                Key = key,
+                Value = value
+            };
         }
 
-
+        public IEnumerator<MyKeyValuePair<TKey, TValue>> GetEnumerator()
+        {
+            foreach (MyKeyValuePair<TKey, TValue> item in items)
+            {
+                yield return item;
+            }
+        }
     }
+
 }

@@ -39,6 +39,17 @@ MyDictionary<int, string> musteriBilgileri = new MyDictionary<int, string>();
 
 musteriBilgileri.Add(13, "Ümit");
 musteriBilgileri.Add(25, "Alba");
+musteriBilgileri.Add(30, "Ferit");
+
+// Kendi oluşturduğumuz KeyValuePair adlı yapıyı çalıştırıp yazdırma işlemi yapalım.
+
+MyKeyValuePair<int,string> myKeyValuePair = new MyKeyValuePair<int,string>();
+
+foreach (MyKeyValuePair<int, string> item in musteriBilgileri)
+{
+    Console.WriteLine("Numara: " + item.Key + ", İsim: " + item.Value);
+}
+
 
 
 
