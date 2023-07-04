@@ -8,9 +8,6 @@ namespace OOP2
 {
     internal class TuzelMusteri : Musteri
     {
-        
-        
         public string VergiNo { get; set; }
-
     }
 }

@@ -8,7 +8,7 @@ namespace OOP2
 {
     internal class GercekMusteri : Musteri
     {
-        
+        public string Adi { get; set; }
         public string Soyad { get; set; }
         public string TcNo { get; set; }
     }
